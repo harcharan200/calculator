@@ -1,9 +1,9 @@
 pipeline{
   agent any
   stages{
-    stage("checkout"){
+    stage("Compile"){
       steps{
-        git url:'https://github.com/harcharan200/calculator.git'
+        sh "./gradlew compileJava"
       }
     }
   }
